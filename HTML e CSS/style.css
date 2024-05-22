@@ -1,0 +1,285 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+
+  font-family: "Mulish", sans-serif;
+
+  --color-base-white: #ffffff;
+  --color-base-pink: #b52184;
+  --color-base-blue: #312d64;
+  --color-base-lightgray: #f9f4fb;
+  --gradient-background: linear-gradient(90deg, #343193 0%, #302c63 100%);
+}
+
+body {
+  background-color: var(--color-base-lightgray);
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 3.2rem 9.3rem;
+
+  text-align: center;
+
+  --startY: -100%;
+  animation: move 1s ease-out;
+}
+
+#hero-container {
+  margin-top: 1.7rem;
+}
+
+h1,
+legend {
+  color: var(--color-base-pink);
+
+  font-size: 3.2rem;
+  font-weight: 900;
+}
+
+#hero p {
+  color: var(--color-base-blue);
+
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.button-down img {
+  margin-top: 3.6rem;
+}
+
+#hero-container img:hover {
+  opacity: 0.8;
+}
+
+#cards {
+  background: var(--gradient-background);
+
+  padding: 5.3rem 3.9rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.card {
+  background-color: var(--color-base-lightgray);
+
+  border-radius: 2rem;
+  padding: 2.65rem;
+}
+
+h2 {
+  color: var(--color-base-pink);
+
+  font-size: 3rem;
+  font-weight: 900;
+
+  margin-top: 3.3rem;
+}
+
+.card p {
+  color: var(--color-base-blue);
+
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  margin-top: 2rem;
+}
+
+#contact {
+  padding: 7.8rem 4rem 6.5rem;
+}
+
+fieldset {
+  margin: 4.3rem 0 0 0.3rem;
+
+  border: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  border-radius: 1.6rem;
+  border: 1.5px solid var(--color-base-blue);
+
+  padding: 1.2rem 1.4rem;
+}
+
+.input-wrapper input,
+::placeholder,
+textarea {
+  color: var(--color-base-blue);
+
+  font-family: "Mulish", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  width: 100%;
+
+  outline: 0;
+}
+
+.input-wrapper input,
+textarea {
+  background-color: var(--color-base-lightgray);
+
+  border: 0;
+}
+
+textarea {
+  height: 12.6rem;
+}
+
+#submit {
+  background: var(--gradient-background);
+  color: var(--color-base-white);
+
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+
+  margin-top: 2.4rem;
+  margin-left: 0.3rem;
+  padding: 1.2rem 1.6rem;
+
+  border: 0;
+  border-radius: 1.6rem;
+}
+
+#submit:hover {
+  opacity: 0.95;
+  cursor: pointer;
+}
+
+footer {
+  background: var(--gradient-background);
+  color: var(--color-base-white);
+
+  font-size: 2rem;
+  font-weight: 600;
+
+  padding: 3.2rem 1.6rem;
+
+  text-align: center;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(var(--startY));
+  }
+}
+
+@media (min-width: 1360px) {
+  #hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 0 2.9rem 10.4rem 10.9rem;
+
+    height: 83.6rem;
+  }
+
+  #hero-container {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+
+    margin-top: 32rem;
+
+    order: 1;
+  }
+
+  #hero-container h1 {
+    font-size: 5.8rem;
+  }
+
+  #hero-container p {
+    font-size: 3.2rem;
+
+    margin-top: 0.8rem;
+    margin-bottom: 17.9rem;
+  }
+
+  .button-down {
+    justify-self: flex-end;
+
+    height: 10.5rem;
+    width: 5.9rem;
+  }
+
+  .button-down img {
+    margin: 0;
+  }
+
+  #astronaut {
+    order: 2;
+  }
+
+  #astronaut img {
+    width: 100%;
+    height: 100%;
+  }
+
+  #cards {
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 6.4rem 11.1rem;
+  }
+
+  .card {
+    max-width: 36.6rem;
+    max-height: 44.8rem;
+
+    padding: 3.2rem 3.2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  .card img {
+    width: 9.7rem;
+    height: 9.7rem;
+  }
+
+  .card h2 {
+    margin-top: 1.6rem;
+
+    font-size: 3.6rem;
+  }
+
+  .card p {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  #contact {
+    background: url(images/background-contact.png);
+    background-repeat: no-repeat;
+    background-position: right;
+
+    padding: 9.5rem 10.9rem;
+  }
+
+  #contact form {
+    max-width: 59.5rem;
+  }
+}
